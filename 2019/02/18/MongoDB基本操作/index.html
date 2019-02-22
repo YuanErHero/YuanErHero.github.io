@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="MongoDB," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="YuanErHero" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="数据库操作创建数据库use DATABASE_NAME 如果数据库不存在，则创建数据库，否则切换到指定数据库。  查看数据库查看所有的数据库： show dbs 删除数据库db.dropDatabase() 删除当前数据库，默认是test  集合操作创建集合db.createCollection(name,options) 参数说明：  name ：集合名称 options ：可选参数，指定有关内">
+<meta name="keywords" content="MongoDB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB基本操作">
+<meta property="og:url" content="http://yuanerHero.top/2019/02/18/MongoDB基本操作/index.html">
+<meta property="og:site_name" content="YuanErHero">
+<meta property="og:description" content="数据库操作创建数据库use DATABASE_NAME 如果数据库不存在，则创建数据库，否则切换到指定数据库。  查看数据库查看所有的数据库： show dbs 删除数据库db.dropDatabase() 删除当前数据库，默认是test  集合操作创建集合db.createCollection(name,options) 参数说明：  name ：集合名称 options ：可选参数，指定有关内">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/GHz1LoU.png">
+<meta property="og:image" content="https://i.imgur.com/Xh8lxmG.png">
+<meta property="og:image" content="https://i.imgur.com/Casx09a.png">
+<meta property="og:image" content="https://i.imgur.com/Y7g04VB.png">
+<meta property="og:image" content="https://i.imgur.com/E9XGoYQ.png">
+<meta property="og:image" content="https://i.imgur.com/J7gMKXF.png">
+<meta property="og:image" content="https://i.imgur.com/loCuCSn.png">
+<meta property="og:image" content="https://i.imgur.com/QpCi7c3.png">
+<meta property="og:image" content="https://i.imgur.com/b6qAQ0o.png">
+<meta property="og:image" content="https://i.imgur.com/ucDMBfY.png">
+<meta property="og:image" content="https://i.imgur.com/w8eC4Np.png">
+<meta property="og:image" content="https://i.imgur.com/dGJqJkW.png">
+<meta property="og:image" content="https://i.imgur.com/xDgM890.png">
+<meta property="og:image" content="https://i.imgur.com/1kBZlvq.png">
+<meta property="og:updated_time" content="2019-02-18T08:26:19.551Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MongoDB基本操作">
+<meta name="twitter:description" content="数据库操作创建数据库use DATABASE_NAME 如果数据库不存在，则创建数据库，否则切换到指定数据库。  查看数据库查看所有的数据库： show dbs 删除数据库db.dropDatabase() 删除当前数据库，默认是test  集合操作创建集合db.createCollection(name,options) 参数说明：  name ：集合名称 options ：可选参数，指定有关内">
+<meta name="twitter:image" content="https://i.imgur.com/GHz1LoU.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yuanerHero.top/2019/02/18/MongoDB基本操作/"/>
+
+
+
+
+
+  <title>MongoDB基本操作 | YuanErHero</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+
+
+<div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YuanErHero</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yuanerHero.top/2019/02/18/MongoDB基本操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523702028531&di=8cf617c38397326306ef03b073965df8&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Fface%2Fd5c7743a0cbee1f770dd2e11b3bc322a009742cd.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuanErHero">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">MongoDB基本操作</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-18T14:44:13+08:00">
+                2019-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MongoDB/" itemprop="url" rel="index">
+                    <span itemprop="name">MongoDB</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  841
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><pre><code>use DATABASE_NAME
+</code></pre><p>如果数据库不存在，则创建数据库，否则切换到指定数据库。</p>
+<p><img src="https://i.imgur.com/GHz1LoU.png" alt=""></p>
+<h3 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a>查看数据库</h3><p>查看所有的数据库：</p>
+<pre><code>show dbs
+</code></pre><h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><pre><code>db.dropDatabase()
+</code></pre><p>删除当前数据库，默认是test</p>
+<p><img src="https://i.imgur.com/Xh8lxmG.png" alt=""></p>
+<h2 id="集合操作"><a href="#集合操作" class="headerlink" title="集合操作"></a>集合操作</h2><h3 id="创建集合"><a href="#创建集合" class="headerlink" title="创建集合"></a>创建集合</h3><pre><code>db.createCollection(name,options)
+</code></pre><p>参数说明：</p>
+<ul>
+<li>name ：集合名称</li>
+<li>options ：可选参数，指定有关内存大小及索引选项</li>
+</ul>
+<p>options参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">capped</td>
+<td style="text-align:center">布尔</td>
+<td style="text-align:center">（可选）如果为 true，则创建固定集合。固定集合是指有着固定大小的集合，当达到最大值时，它会自动覆盖最早的文档。当该值为 true 时，必须指定 size 参数。</td>
+</tr>
+<tr>
+<td style="text-align:center">autoIndexId</td>
+<td style="text-align:center">布尔</td>
+<td style="text-align:center">（可选）如为 true，自动在 _id 字段创建索引。默认为 false。</td>
+</tr>
+<tr>
+<td style="text-align:center">size</td>
+<td style="text-align:center">数值</td>
+<td style="text-align:center">（可选）为固定集合指定一个最大值（以字节计）。如果 capped 为 true，也需要指定该字段。</td>
+</tr>
+<tr>
+<td style="text-align:center">max</td>
+<td style="text-align:center">数值</td>
+<td style="text-align:center">（可选）指定固定集合中包含文档的最大数量。</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://i.imgur.com/Casx09a.png" alt=""></p>
+<h3 id="删除集合"><a href="#删除集合" class="headerlink" title="删除集合"></a>删除集合</h3><pre><code>db.collection.drop()
+</code></pre><p><img src="https://i.imgur.com/Y7g04VB.png" alt=""></p>
+<h2 id="文档操作"><a href="#文档操作" class="headerlink" title="文档操作"></a>文档操作</h2><h3 id="插入文档"><a href="#插入文档" class="headerlink" title="插入文档"></a>插入文档</h3><pre><code>db.collection_name.insert(document)    
+</code></pre><p><img src="https://i.imgur.com/E9XGoYQ.png" alt=""></p>
+<h3 id="显示文档"><a href="#显示文档" class="headerlink" title="显示文档"></a>显示文档</h3><pre><code>db.collection_name.find()
+</code></pre><p><img src="https://i.imgur.com/J7gMKXF.png" alt=""></p>
+<h3 id="更新文档"><a href="#更新文档" class="headerlink" title="更新文档"></a>更新文档</h3><h4 id="update"><a href="#update" class="headerlink" title="update()"></a>update()</h4><pre><code>db.collection.update(
+    &lt;query&gt;,
+    &lt;update&gt;,
+    {
+        upsert: &lt;boolean&gt;,
+         multi: &lt;boolean&gt;,
+         writeConcern: &lt;document&gt;
+
+    }
+
+)
+</code></pre><p>参数说明：</p>
+<ul>
+<li>query : update的查询条件，类似sql update查询内where后面的。</li>
+<li>update : update的对象和一些更新的操作符（如$,$inc…）等，也可以理解为sql update查询内set后面的</li>
+<li>upsert : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。</li>
+<li>multi : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。</li>
+<li>writeConcern :可选，抛出异常的级别。</li>
+</ul>
+<p><img src="https://i.imgur.com/loCuCSn.png" alt=""></p>
+<h4 id="save"><a href="#save" class="headerlink" title="save()"></a>save()</h4><pre><code>db.collection.save(
+       &lt;document&gt;,
+       {
+     writeConcern: &lt;document&gt;
+       }
+)
+</code></pre><p>参数说明：</p>
+<ul>
+<li>document : 文档数据。</li>
+<li>writeConcern :可选，抛出异常的级别。</li>
+</ul>
+<h3 id="删除文档"><a href="#删除文档" class="headerlink" title="删除文档"></a>删除文档</h3><pre><code>db.collection.remove(
+       &lt;query&gt;,
+       &lt;justOne&gt;
+)
+</code></pre><p>如果你的 MongoDB 是 2.6 版本以后的，语法格式如下：</p>
+<pre><code>db.collection.remove(
+       &lt;query&gt;,
+       {
+     justOne: &lt;boolean&gt;,
+     writeConcern: &lt;document&gt;
+       }
+)
+</code></pre><p>参数说明：</p>
+<ul>
+<li>query :（可选）删除的文档的条件。</li>
+<li>justOne : （可选）如果设为 true 或 1，则只删除一个文档，如果不设置该参数，或使用默认值 false，则删除所有匹配条件的文档。</li>
+<li>writeConcern :（可选）抛出异常的级别。</li>
+</ul>
+<p><img src="https://i.imgur.com/QpCi7c3.png" alt=""></p>
+<p>如果你只想删除第一条找到的数据，需要将justOne为1</p>
+<p><img src="https://i.imgur.com/b6qAQ0o.png" alt=""></p>
+<p>删除所有的数据：</p>
+<pre><code>db.collection.remove({})
+</code></pre><h3 id="查询文档"><a href="#查询文档" class="headerlink" title="查询文档"></a>查询文档</h3><pre><code>db.collection.find(query, projection)
+</code></pre><p>参数说明：</p>
+<ul>
+<li>query ：可选，使用查询操作符指定查询条件</li>
+<li>projection ：可选，使用投影操作符指定返回的键。查询时返回文档中所有键值， 只需省略该参数即可（默认省略）。</li>
+</ul>
+<p><img src="https://i.imgur.com/ucDMBfY.png" alt=""></p>
+<p>格式化显示文档：</p>
+<pre><code>db.collection.find().pretty()
+</code></pre><p><img src="https://i.imgur.com/w8eC4Np.png" alt=""></p>
+<h2 id="MongoDB-与-RDBMS-Where-语句比较"><a href="#MongoDB-与-RDBMS-Where-语句比较" class="headerlink" title="MongoDB 与 RDBMS Where 语句比较"></a>MongoDB 与 RDBMS Where 语句比较</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">操作</th>
+<th style="text-align:center">格式</th>
+<th style="text-align:center">范例</th>
+<th style="text-align:center">RDBMS中的类似语句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">等于</td>
+<td style="text-align:center">{&lt; k &gt;:&lt; v &gt;}</td>
+<td style="text-align:center">db.col.find({“age”:”23”}).pretty()</td>
+<td style="text-align:center">where name = 23</td>
+</tr>
+<tr>
+<td style="text-align:center">小于</td>
+<td style="text-align:center">{&lt; k &gt;:{$lt:&lt; v &gt;}}</td>
+<td style="text-align:center">db.col.find({“age”:{$lt:23}}).pretty()</td>
+<td style="text-align:center">where age &lt; 23</td>
+</tr>
+<tr>
+<td style="text-align:center">小于或等于</td>
+<td style="text-align:center">{&lt; k &gt;:{$lte:&lt; v &gt;}}</td>
+<td style="text-align:center">db.col.find({“age”:{$lte:23}}).pretty()</td>
+<td style="text-align:center">where age &lt;= 23</td>
+</tr>
+<tr>
+<td style="text-align:center">大于</td>
+<td style="text-align:center">{&lt; k &gt;:{$gt:&lt; v &gt;}}</td>
+<td style="text-align:center">db.col.find({“age”:{$gt:23}}).pretty()</td>
+<td style="text-align:center">where age &gt; 23</td>
+</tr>
+<tr>
+<td style="text-align:center">大于或等于</td>
+<td style="text-align:center">{&lt; k &gt;:{$gte:&lt; v &gt;}}</td>
+<td style="text-align:center">db.col.find({“age”:{$gte:23}}).pretty()</td>
+<td style="text-align:center">where age &gt;= 23</td>
+</tr>
+<tr>
+<td style="text-align:center">不等于</td>
+<td style="text-align:center">{&lt; k &gt;:{$ne:&lt; v &gt;}}</td>
+<td style="text-align:center">db.col.find({“age”:{$ne:50}}).pretty()</td>
+<td style="text-align:center">where age != 23</td>
+</tr>
+</tbody>
+</table>
+<h2 id="MongoDB-AND条件"><a href="#MongoDB-AND条件" class="headerlink" title="MongoDB AND条件"></a>MongoDB AND条件</h2><pre><code>db.collection.find({key1:value1,key2:value2}).pretty()
+</code></pre><p><img src="https://i.imgur.com/dGJqJkW.png" alt=""></p>
+<h2 id="MongoDB-or条件"><a href="#MongoDB-or条件" class="headerlink" title="MongoDB or条件"></a>MongoDB or条件</h2><pre><code>db.collection.find(
+    {
+        $or:[
+            {key1:value1},{key2:value2}
+        ]
+    }
+).pretty()
+</code></pre><p><img src="https://i.imgur.com/xDgM890.png" alt=""></p>
+<h2 id="AND和OR联合使用"><a href="#AND和OR联合使用" class="headerlink" title="AND和OR联合使用"></a>AND和OR联合使用</h2><pre><code>db.collection.find(
+    {
+        &apos;key&apos;:value  // AND
+
+        $or:[         // or
+            {key1:value1},{key2:value2}
+        ]
+    }
+).pretty()
+</code></pre><p><img src="https://i.imgur.com/1kBZlvq.png" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MongoDB/" rel="tag"><i class="fa fa-tag"></i>MongoDB</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/18/MongoDB简介/" rel="next" title="MongoDB简介">
+                <i class="fa fa-chevron-left"></i> MongoDB简介
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/18/MongoDB $type操作符/" rel="prev" title="MongoDB $type 操作符">
+                MongoDB $type 操作符 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523702028531&di=8cf617c38397326306ef03b073965df8&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Fface%2Fd5c7743a0cbee1f770dd2e11b3bc322a009742cd.jpg"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yuanerhero/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/5729289439/profile?topnav=1&wvr=6/" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库操作"><span class="nav-number">1.</span> <span class="nav-text">数据库操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数据库"><span class="nav-number">1.1.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看数据库"><span class="nav-number">1.2.</span> <span class="nav-text">查看数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据库"><span class="nav-number">1.3.</span> <span class="nav-text">删除数据库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合操作"><span class="nav-number">2.</span> <span class="nav-text">集合操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建集合"><span class="nav-number">2.1.</span> <span class="nav-text">创建集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除集合"><span class="nav-number">2.2.</span> <span class="nav-text">删除集合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档操作"><span class="nav-number">3.</span> <span class="nav-text">文档操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#插入文档"><span class="nav-number">3.1.</span> <span class="nav-text">插入文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示文档"><span class="nav-number">3.2.</span> <span class="nav-text">显示文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新文档"><span class="nav-number">3.3.</span> <span class="nav-text">更新文档</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#update"><span class="nav-number">3.3.1.</span> <span class="nav-text">update()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#save"><span class="nav-number">3.3.2.</span> <span class="nav-text">save()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除文档"><span class="nav-number">3.4.</span> <span class="nav-text">删除文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询文档"><span class="nav-number">3.5.</span> <span class="nav-text">查询文档</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-与-RDBMS-Where-语句比较"><span class="nav-number">4.</span> <span class="nav-text">MongoDB 与 RDBMS Where 语句比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-AND条件"><span class="nav-number">5.</span> <span class="nav-text">MongoDB AND条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-or条件"><span class="nav-number">6.</span> <span class="nav-text">MongoDB or条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AND和OR联合使用"><span class="nav-number">7.</span> <span class="nav-text">AND和OR联合使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+      <div id="music163player">
+         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32196440&auto=0&height=66"></iframe>
+      </div>
+
+    </div>
+  
+  </aside>
+
+
+        
+      </div>
+  </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+
+  
+</div>
+
+
+
+
+
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+    本站访客数:<span id="busuanzi_value_site_uv"></span>
+  </span>
+  </div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共13.6k字</span>
+</div>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  
+</body>
+</html>

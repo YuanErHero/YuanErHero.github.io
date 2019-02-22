@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="GDI+," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="YuanErHero" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="配置GDI+GDI+（Graphics Device Interface plus）是Windows XP中的一个子系统，它主要负责在显示屏幕和打印设备输出有关信息，它是一组通过C++类实现的应用程序编程接口 这里为了更好的说明过程，假设我建立的MFC应用程序命名为Image 1.在建立好的MFC应用程序下，在头文件下找到Image.h,在CImageApp类中添加两个成员变量 GdiplusSt">
+<meta name="keywords" content="GDI+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vs2010 MFC使用GDI+显示图片">
+<meta property="og:url" content="http://yuanerHero.top/2018/05/10/vs2010-MFC使用GDI-显示图片/index.html">
+<meta property="og:site_name" content="YuanErHero">
+<meta property="og:description" content="配置GDI+GDI+（Graphics Device Interface plus）是Windows XP中的一个子系统，它主要负责在显示屏幕和打印设备输出有关信息，它是一组通过C++类实现的应用程序编程接口 这里为了更好的说明过程，假设我建立的MFC应用程序命名为Image 1.在建立好的MFC应用程序下，在头文件下找到Image.h,在CImageApp类中添加两个成员变量 GdiplusSt">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/aMPKLTr.png">
+<meta property="og:image" content="https://i.imgur.com/BF5GejS.png">
+<meta property="og:image" content="https://i.imgur.com/x9x7SQb.png">
+<meta property="og:updated_time" content="2018-05-10T15:31:23.079Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vs2010 MFC使用GDI+显示图片">
+<meta name="twitter:description" content="配置GDI+GDI+（Graphics Device Interface plus）是Windows XP中的一个子系统，它主要负责在显示屏幕和打印设备输出有关信息，它是一组通过C++类实现的应用程序编程接口 这里为了更好的说明过程，假设我建立的MFC应用程序命名为Image 1.在建立好的MFC应用程序下，在头文件下找到Image.h,在CImageApp类中添加两个成员变量 GdiplusSt">
+<meta name="twitter:image" content="https://i.imgur.com/aMPKLTr.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yuanerHero.top/2018/05/10/vs2010-MFC使用GDI-显示图片/"/>
+
+
+
+
+
+  <title>vs2010 MFC使用GDI+显示图片 | YuanErHero</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+
+
+<div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YuanErHero</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yuanerHero.top/2018/05/10/vs2010-MFC使用GDI-显示图片/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523702028531&di=8cf617c38397326306ef03b073965df8&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Fface%2Fd5c7743a0cbee1f770dd2e11b3bc322a009742cd.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuanErHero">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">vs2010 MFC使用GDI+显示图片</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-10T21:18:02+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/图像处理/" itemprop="url" rel="index">
+                    <span itemprop="name">图像处理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  482
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="配置GDI"><a href="#配置GDI" class="headerlink" title="配置GDI+"></a>配置GDI+</h3><p>GDI+（Graphics Device Interface plus）是Windows XP中的一个子系统，它主要负责在显示屏幕和打印设备输出有关信息，它是一组通过C++类实现的应用程序编程接口</p>
+<p><strong>这里为了更好的说明过程，假设我建立的MFC应用程序命名为Image</strong></p>
+<p>1.在建立好的MFC应用程序下，在头文件下找到<strong><code>Image.h</code></strong>,在<strong><code>CImageApp</code></strong>类中添加两个成员变量</p>
+<pre><code>GdiplusStartupInput    m_Gdistart; 
+ULONG_PTR    m_GdiplusToken; 
+</code></pre><p>2.找到源文件下的<strong><code>Image.cpp</code></strong>,在里面的<strong><code>InitInstance()</code></strong>函数中添加：</p>
+<pre><code>GdiplusStartup(&amp;m_GdiplusToken,&amp; m_Gdistart,NULL); 
+</code></pre><p>3.在上一步的文件中找到<strong><code>ExitInstance()</code></strong>函数，添加：</p>
+<pre><code>GdiplusShutdown(m_GdiplusToken); 
+</code></pre><p>4.在头文件 <strong><code>stdafx.h</code></strong> 中添加: </p>
+<pre><code>#include &quot;gdiplus.h&quot; 
+using namespace Gdiplus; 
+</code></pre><p>5.在“项目”-&gt;“属性”-&gt;“配置属性”-&gt;“链接器”<br>-&gt;“输入”-&gt;“附加依赖项”中添加: <strong><code>gdiplus.lib</code></strong> </p>
+<p><img src="https://i.imgur.com/aMPKLTr.png" alt=""></p>
+<h3 id="添加文件对话框"><a href="#添加文件对话框" class="headerlink" title="添加文件对话框"></a>添加文件对话框</h3><p>1.<strong><code>Gdiplus::Bitmap</code></strong>类为我们提供了读取各类图像文件的接口，所以我们可以在<strong><code>ImageDoc.h</code></strong>中定义一个Bitmap的指针变量：</p>
+<pre><code>Bitmap* m_pCurBitmap;
+</code></pre><p>2.在<strong><code>ImageDoc.cpp</code></strong>中找到构造函数和析构函数，在构造函数中插入：</p>
+<pre><code>m_pCurBitmap = NULL;
+</code></pre><p>在析构函数中插入：</p>
+<pre><code>if(NULL != m_pCurBitmap)
+    delete m_pCurBitmap;
+m_pCurBitmap = NULL;
+</code></pre><p>3.利用“项目”-&gt;“类向导”-&gt;“虚函数”-&gt;”OnDraw”,添加虚函数OnDraw，<br>接着将函数改为：</p>
+<pre><code>void CImageView::OnDraw(CDC* pDc)
+{
+    CImageDoc * pDoc = this-&gt;GetDocument();
+    if(NULL == pDoc)
+        return;
+    if(NULL == pDoc-&gt;m_pCurBitmap)
+        return;
+    Graphics g(pDc-&gt;m_hDC);
+    g.DrawImage(pDoc-&gt;m_pCurBitmap,0,0);
+} 
+</code></pre><p>4.在资源文件中找到<strong><code>Image.rc</code></strong>,打开<strong><code>Menu</code></strong>，找到   <strong><code>IDR_MAINFRAME</code></strong>,双击。添加一个按钮，例如叫“打开图像”。</p>
+<p><img src="https://i.imgur.com/BF5GejS.png" alt=""></p>
+<p>5.右击“打开图像” -&gt; “添加事件处理程序”，选择<strong><code>CImageDoc</code></strong>,点击确定后，会跳转到其函数，在其中添加如下代码：</p>
+<pre><code>TCHAR szFilter[] = _T(&quot;image(*.jpg)|*.jpg|所有文件(*.*)|*.*||&quot;);   
+// 构造打开文件对话框   
+CFileDialog FileDlg(TRUE, _T(&quot;&quot;), NULL, 0, szFilter); 
+CString strPathFile;   
+
+// 显示打开文件对话框   
+ if(IDOK==FileDlg.DoModal())  
+{  
+    strPathFile = FileDlg.GetPathName();  
+    m_pCurBitmap = Bitmap::FromFile(strPathFile);
+ }
+</code></pre><h3 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h3><p>结束上述工作后，就可以调试成功了！</p>
+<p><img src="https://i.imgur.com/x9x7SQb.png" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/GDI/" rel="tag"><i class="fa fa-tag"></i>GDI+</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/03/ThinkPHP5过滤数据表不存在的字段/" rel="next" title="ThinkPHP 5过滤数据表中不存在的字段">
+                <i class="fa fa-chevron-left"></i> ThinkPHP 5过滤数据表中不存在的字段
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/11/PHP第一章-PHP语言基础/" rel="prev" title="PHP第一章 PHP语言基础 ">
+                PHP第一章 PHP语言基础  <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523702028531&di=8cf617c38397326306ef03b073965df8&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Fface%2Fd5c7743a0cbee1f770dd2e11b3bc322a009742cd.jpg"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yuanerhero/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/5729289439/profile?topnav=1&wvr=6/" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置GDI"><span class="nav-number">1.</span> <span class="nav-text">配置GDI+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加文件对话框"><span class="nav-number">2.</span> <span class="nav-text">添加文件对话框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完成"><span class="nav-number">3.</span> <span class="nav-text">完成</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+      <div id="music163player">
+         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32196440&auto=0&height=66"></iframe>
+      </div>
+
+    </div>
+  
+  </aside>
+
+
+        
+      </div>
+  </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+
+  
+</div>
+
+
+
+
+
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+    本站访客数:<span id="busuanzi_value_site_uv"></span>
+  </span>
+  </div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共13.6k字</span>
+</div>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  
+</body>
+</html>

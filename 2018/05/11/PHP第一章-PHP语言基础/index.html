@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="PHP," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="YuanErHero" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="PHP语法基础PHP标记风格PHP表示符能够让web服务器识别PHP代码的开始和结束，两个标记之间的所有文本都会被解释为PHP，而标记之外的任何文本都会被认为普通的HTML，这就是PHP标识符的作用。 PHP标记符风格迥异，按照风格的不同可划分一下4种。 （1）标准风格（推荐使用） &amp;lt;?php     echo&amp;quot;标准风格的PHP标记&amp;quot;; ?&amp;gt; （2）脚本风格（在XH">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP第一章 PHP语言基础 ">
+<meta property="og:url" content="http://yuanerHero.top/2018/05/11/PHP第一章-PHP语言基础/index.html">
+<meta property="og:site_name" content="YuanErHero">
+<meta property="og:description" content="PHP语法基础PHP标记风格PHP表示符能够让web服务器识别PHP代码的开始和结束，两个标记之间的所有文本都会被解释为PHP，而标记之外的任何文本都会被认为普通的HTML，这就是PHP标识符的作用。 PHP标记符风格迥异，按照风格的不同可划分一下4种。 （1）标准风格（推荐使用） &amp;lt;?php     echo&amp;quot;标准风格的PHP标记&amp;quot;; ?&amp;gt; （2）脚本风格（在XH">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/pxkbvAM.jpg">
+<meta property="og:image" content="https://i.imgur.com/zIuEYSV.jpg">
+<meta property="og:image" content="http://i.imgur.com/gKMRXBY.jpg">
+<meta property="og:image" content="http://i.imgur.com/n5gR9W0.jpg">
+<meta property="og:image" content="http://i.imgur.com/Z5Jf4XQ.jpg">
+<meta property="og:image" content="http://i.imgur.com/uUbn761.jpg">
+<meta property="og:image" content="http://i.imgur.com/XbSPEKi.jpg">
+<meta property="og:image" content="http://i.imgur.com/kWrYFkm.jpg">
+<meta property="og:updated_time" content="2018-05-11T13:38:40.458Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP第一章 PHP语言基础 ">
+<meta name="twitter:description" content="PHP语法基础PHP标记风格PHP表示符能够让web服务器识别PHP代码的开始和结束，两个标记之间的所有文本都会被解释为PHP，而标记之外的任何文本都会被认为普通的HTML，这就是PHP标识符的作用。 PHP标记符风格迥异，按照风格的不同可划分一下4种。 （1）标准风格（推荐使用） &amp;lt;?php     echo&amp;quot;标准风格的PHP标记&amp;quot;; ?&amp;gt; （2）脚本风格（在XH">
+<meta name="twitter:image" content="https://i.imgur.com/pxkbvAM.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yuanerHero.top/2018/05/11/PHP第一章-PHP语言基础/"/>
+
+
+
+
+
+  <title>PHP第一章 PHP语言基础  | YuanErHero</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+
+
+<div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YuanErHero</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yuanerHero.top/2018/05/11/PHP第一章-PHP语言基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523702028531&di=8cf617c38397326306ef03b073965df8&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Fface%2Fd5c7743a0cbee1f770dd2e11b3bc322a009742cd.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuanErHero">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PHP第一章 PHP语言基础 </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-11T21:03:00+08:00">
+                2018-05-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4,837
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  18
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="PHP语法基础"><a href="#PHP语法基础" class="headerlink" title="PHP语法基础"></a>PHP语法基础</h3><h4 id="PHP标记风格"><a href="#PHP标记风格" class="headerlink" title="PHP标记风格"></a>PHP标记风格</h4><p>PHP表示符能够让web服务器识别PHP代码的开始和结束，两个标记之间的所有文本都会被解释为PHP，而标记之外的任何文本都会被认为普通的HTML，这就是PHP标识符的作用。</p>
+<p>PHP标记符风格迥异，按照风格的不同可划分一下4种。</p>
+<p>（1）标准风格（推荐使用）</p>
+<pre><code>&lt;?php
+    echo&quot;标准风格的PHP标记&quot;;
+?&gt;
+</code></pre><p>（2）脚本风格（在XHTML或者XML推荐使用）</p>
+<pre><code>&lt;script language=&quot;php&quot;&gt;
+    echo &apos;这是脚本风格的标记&apos;;
+&lt;/script&gt;
+</code></pre><p>（3）简短风格(需配置文件php.int，不推荐使用)</p>
+<pre><code>&lt;?
+    echo&quot;简短风格标记&quot;;
+?&gt;
+</code></pre><p>（4）ASP风格</p>
+<pre><code>&lt;%
+echo&quot;ASP风格的标记&quot;;
+%&gt;
+</code></pre><h4 id="PHP注释应用"><a href="#PHP注释应用" class="headerlink" title="PHP注释应用"></a>PHP注释应用</h4><ol>
+<li><p>// 单行注释</p>
+</li>
+<li><p>/<em> ….. </em>/  多行注释       （多行注释不允许嵌套操作）</p>
+</li>
+</ol>
+<p>3.shell风格注释</p>
+<pre><code>&lt;?php
+    echo&quot;这是shell脚本风格的注释&quot;;   #这里的内容是看不见的
+?&gt;
+</code></pre><p>注意：在单行注释里不要出现“?&gt;”的标志，因为解释器会认为php脚本结束，而去执行”?&gt;”后面的代码。</p>
+<h3 id="PHP的数据类型"><a href="#PHP的数据类型" class="headerlink" title="PHP的数据类型"></a>PHP的数据类型</h3><p><img src="https://i.imgur.com/pxkbvAM.jpg" alt=""></p>
+<h4 id="标量数据类型"><a href="#标量数据类型" class="headerlink" title="标量数据类型"></a>标量数据类型</h4><p>标量数据类型是数据结构中最基本的单元，只能存储一个数据。</p>
+<p>1.布尔型（boolean）</p>
+<p>（1）布尔型保存了一个true值和false值，其中true和false是PHP的内部关键字。</p>
+<p>（注意：在PHP中不是只有false值才为假的，在一些特殊情况在boolean值也被认为是false。比如：0，0.0，“0”，空字符串(“”),只声明没有赋值的数组等。）</p>
+<p>（2）美元符号$是变量的标识符，所有变量都是以$开头的，无论是声明变量还是调用变量，都应该用$.</p>
+<p>2.字符串型（string）</p>
+<p>（1）字符串是连续的字符序列，由数字，字母和符号组成。字符串中的每个字符只占用一个字符。</p>
+<p>（2）字符串的3种表示方法：单引号（’）,双引号（”），界定符（&lt;&lt;&lt;）.</p>
+<p>（3）单引号和双引号的区别在于：双引号中所包含的变量会自动被替换成实际数值，而单引号中包含的变量则按普通字符输出</p>
+<p><img src="https://i.imgur.com/zIuEYSV.jpg" alt=""></p>
+<ul>
+<li><p>界定符在使用时后街一个标识符，然后是字符串，最后是同样的标识符结束字符串。格式如下：</p>
+<pre><code>$string=&lt;&lt;&lt;str
+要输出的字符串。
+str
+</code></pre><p>结束标识符必须单独另起一行，并不允许有空格。在标识符前后有其他符号或者字符，也会发生错误。</p>
+</li>
+</ul>
+<p>3.整型（interger）</p>
+<p>整型数据类型只能包含整数。如果在八进制中出现了非法数字（8和9），则后面的数字会被忽略掉。</p>
+<p>如果给定的值超过了int型所能表示的最大范围，将会被当做float型处理。</p>
+<p>4.浮点型（float）</p>
+<p>浮点型的书写格式：标准格式，科学计数法格式，</p>
+<p>注意：浮点型的数值只是一个近似值，所以尽量避免浮点型数值之间的比较。</p>
+<h4 id="复合数据类型"><a href="#复合数据类型" class="headerlink" title="复合数据类型"></a>复合数据类型</h4><p>1.数组（array）</p>
+<p>数组中的每个数据称为一个元素，元素包括索引（键名）和值两个部分。元素的索引可以是由数字或字符串组成，元素的值可以是多种数据类型。</p>
+<p> 定义数组的语法格式如下：</p>
+<pre><code>$array=(&apos;value1&apos;,&apos;value2&apos;....)
+</code></pre><p>或</p>
+<pre><code>$array[key]=&apos;value&apos;
+</code></pre><p>或<br>        $array=array(key1=&gt;value1,key2=&gt;value2….)</p>
+<p>其中，参数key是数组元素的下标，value是数组下标所对应的元素</p>
+<ul>
+<li>声明数组后，数组中的元素个数还可以自由更改。只要给数组赋值，数组就会自动增加长度。</li>
+</ul>
+<p>2.对象（object）编程语言所应用到的方法有两种，面向对象和面向过程。在PHP中，用户可以自由的使用这两种方法。</p>
+<h4 id="特殊数据类型"><a href="#特殊数据类型" class="headerlink" title="特殊数据类型"></a>特殊数据类型</h4><p>1.资源（resource）</p>
+<p>资源是一种特殊变量，又叫做句柄，保存到外部资源的一个引用。资源是通过专门的函数来建立和使用的。</p>
+<p>在使用资源的时候，系统会自动启动垃圾回收机制，释放不在使用的资源，避免内存消耗殆尽。</p>
+<p>2.空值（null）</p>
+<p>空值表示没有为该变量设置任何值，空值不分大小写。</p>
+<ul>
+<li>被赋予空值的情况有以下3种：还么有赋任何值，被赋值null，被unset（）函数处理过的变量。</li>
+</ul>
+<h4 id="转换数据类型"><a href="#转换数据类型" class="headerlink" title="转换数据类型"></a>转换数据类型</h4><pre><code>(integer)                  - 转换成整型
+(boolean)                  - 转换成布尔型
+(float)                    - 转换成浮点型
+(string)                   - 转换成字符串
+(array)                    - 转换成数组
+(object)                   - 转换成对象
+</code></pre><p>注意：转换成boolean型时，null，0和未赋值的变量或者数组都会被转化成false，其他的为真；转换成整型时，布尔型的false转换为0，true转换为1，字符型如果以数字开头就截取到非数字位，否则输出0。</p>
+<ul>
+<li><p>类型转换还可以通过settype（）函数来完成</p>
+<pre><code>bool settype（mixed var，string type）
+</code></pre><p>参数var为指定的变量，参数type为指定的类型。如果转换成功则返回true，否则返回false。</p>
+</li>
+</ul>
+<h4 id="检测数据类型"><a href="#检测数据类型" class="headerlink" title="检测数据类型"></a>检测数据类型</h4><p>PHP内置了检测数据类型的系列函数，可以对不同类型的数据进行检测，判断其是否属于某个类型，如果符合则返回true，否则返回false。</p>
+<p><img src="http://i.imgur.com/gKMRXBY.jpg" alt=""></p>
+<h3 id="PHP的常量应用"><a href="#PHP的常量应用" class="headerlink" title="PHP的常量应用"></a>PHP的常量应用</h3><h4 id="声明和使用常量"><a href="#声明和使用常量" class="headerlink" title="声明和使用常量"></a>声明和使用常量</h4><p>在PHP中使用define（）函数来定义常量，语法为：</p>
+<pre><code>define（string constant_name,mixed value,case_sensitive=true）
+</code></pre><ul>
+<li>constant_name:必选参数，常量名称，即标识符。</li>
+<li>value：必选参数，常量的值</li>
+<li>case_sensitive：可选参数，指定是否大小写敏感，设定为true表示不敏感。默认状态表示大小写敏感。</li>
+</ul>
+<p>获取常量的方法：</p>
+<ul>
+<li><p>使用常量名直接获取值</p>
+</li>
+<li><p>使用constant（）函数</p>
+<pre><code>mixed constant（string constant_name）;
+</code></pre><p>  成功返回true，否则返回false。</p>
+</li>
+</ul>
+<h4 id="预定义常量"><a href="#预定义常量" class="headerlink" title="预定义常量"></a>预定义常量</h4><p>PHP可以使用预定义常量获取PHP中的信息。</p>
+<p><img src="http://i.imgur.com/n5gR9W0.jpg" alt=""></p>
+<p>注意：“ <strong> FILE </strong> ”和“ <strong> LINE </strong> ”中的“ __ ”是两条下划线，而不是一条“ _ ”。</p>
+<p>实例代码：</p>
+<pre><code>&lt;?php
+echo&quot;当前文件路径： &quot;. __ FILE __ ;
+echo&quot;&lt;br&gt;当前行数： &quot;.__ LINE __ ;
+echo&quot;&lt;br&gt;当前PHP版本信息：&quot;.PHP_VERSON;
+echo&quot;&lt;br&gt;当前操作系统：&quot;.PHP_OS;
+?&gt;
+</code></pre><h3 id="PHP的变量应用"><a href="#PHP的变量应用" class="headerlink" title="PHP的变量应用"></a>PHP的变量应用</h3><h4 id="变量声明及使用"><a href="#变量声明及使用" class="headerlink" title="变量声明及使用"></a>变量声明及使用</h4><p>（1）PHP中的变量名称用$和标识符表示，变量名是区分大小写的。</p>
+<p>（2）PHP中的变量名称遵循以下约定：</p>
+<ul>
+<li><p>在PHP中的变量名是区分大小写的。</p>
+</li>
+<li><p>变量名必须以美元符号（$）开始。</p>
+</li>
+<li><p>变量名开头可以以下划线开始。</p>
+</li>
+<li><p>变量名不能以数字开头。</p>
+</li>
+<li><p>变量名可以包含一些扩展字符（如重音拉丁字母），但是不能包含非扩展字符（如汉字字符和汉字字母）。</p>
+</li>
+</ul>
+<p>（3）声明变量不可以与已有的变量重名。</p>
+<p>（4）在程序中使用变量，需要为变量赋值。PHP中变量定义非常简单，灵活，在定义变量是，不需要指定变量的类型。，PHP自动通过对变量的赋值决定其类型，变量的赋值是通过使用赋值运算符（=）实现的，在定义变量是可以直接为变量赋值，此时称为变量的初始化。</p>
+<p>（5）字符串的初始值为空值，整型的初始值为0，布尔型的初始值为false。</p>
+<pre><code>注意：在PHP中变量名称区别大小写，而函数名称不区分大小写。
+</code></pre><p>（6）另外两种方式来给变量声明和赋值：</p>
+<ul>
+<li><p>变量间的赋值、</p>
+</li>
+<li><p>引用赋值：指用不同的名字访问同一个变量内容，当改变其中的一个变量的值时，另一个也跟着发生变化。使用&amp;符号来表示引用。</p>
+<pre><code>&lt;?php
+$str = &quot;是一家知名的软件公司&quot;；    
+$str2 = &amp; $str;
+$str = &quot;明日科技：$str&quot;;
+echo $str2;
+ehco&quot;&lt;p&gt;&quot;;
+echo $str;
+?&gt;
+</code></pre><p>运行结果：<br><img src="http://i.imgur.com/Z5Jf4XQ.jpg" alt=""></p>
+</li>
+</ul>
+<blockquote>
+<p>引用和复制的区别：复制是将原变量内容复制下来，开辟一个新的内存空间保存，而引用则是给变量的内容再命一个名字。</p>
+</blockquote>
+<h4 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h4><p>1.全局变量：被定义在所有函数以外的变量，其作用域是整个PHP文件，但是在用户自定义函数内部是不可用的。想在用户自定义函数内部使用全局变量，要使用关键字global声明，或者通过使用全局数组$globals进行访问。</p>
+<p>2.局部变量：在函数内部定义的变量，只限于在函数内部使用，在函数外不能被使用。</p>
+<p>3.静态变量：能够在函数调用结束后仍保留变量值，当再次回到其作用域时，又可以继续使用原来的值。而一般变量是在函数调用结束后，其存储的数据值将被清除，所占的内存空间被释放。使用静态变量时，先要用关键字static来声明变量，需要把关键字static放在定义的变量之前。（静态变量一旦被定义，在当前程序文件结束之前一直存在。）</p>
+<p>声明格式：</p>
+<pre><code>static $str;
+</code></pre><h4 id="可变变量"><a href="#可变变量" class="headerlink" title="可变变量"></a>可变变量</h4><p>可变变量是一种独特的变量，变量的名称并不是预先定义好的，而是动态地设置和使用。可变变量一般是指使用一个变量的值作为另一个变量的名称，所以可变变量又称为变量的变量。可变变量通过在一个变量名称前使用两个”$”符号实现。</p>
+<p>例：</p>
+<pre><code>&lt;?php
+$change_name = &quot;Look&quot;;
+$Look = &quot;美好的一天开始了！&quot;;
+echo $change_name;
+echo $$chang_name;
+?&gt;
+</code></pre><h4 id="预定义变量"><a href="#预定义变量" class="headerlink" title="预定义变量"></a>预定义变量</h4><p>通过预定义变量可以获取到用户会话，用户操作系统的环境和本地操作系统的环境等信息。</p>
+<p>1.$ _ SERVER[‘SERVER _ ADDR’]:当前运行脚本所在服务器的IP地址。</p>
+<p>2.$ _ SERVER[‘SERVER _ NAME’]:当前运行脚本所在服务器主机的名称。如果该脚本运行在一个虚拟主机上，则该名称是由那个虚拟主机所设置的值决定。</p>
+<p>3.$ _ SERVER[‘REQUSEST _ METHOD’]:访问页面时的请求方法，如GET，HEAD,POST,PUT。如果请求的方式是HEAD，则PHP脚本将在送出去信息后终止（这意味着在产生任何输出后，不在有输出缓冲）</p>
+<p>4.$ _ SERVER[‘REMOTE _ ADDR’]:正在浏览当前页面用户的IP地址。</p>
+<p>5.$ _ SERVER[‘REMOTE _ HOST’]：正在浏览当前页面用户的主机名。反向域名解析基于该用户的REMOTE_ADDR</p>
+<p>6.$ _ SERVER[‘REMOTE _ PORT’]:用户连接到服务器时所使用的端口。</p>
+<p>7.$ _ SERVER[‘SCRIPT_FILENAME’]:当前执行脚本的绝对路径名。注意，如果脚本在CLI中被执行，作为相对路径，如file.php或者../file.php,$ _ SERVER[‘SCRIPT _ FILENAME’]将包含用户指定的相对路径。</p>
+<p>8.$ _ SERVER[‘SERVER_PORT’]:<br>服务器所使用的端口，默认为80.如果使用SSL安全连接，则这个值为用户设置的HTTP端口。</p>
+<p>9.$ _ SERVER[‘DOCUMENT_ROOT’]：当前运行脚本所在的文档根目录。在服务器配置文件中定义。</p>
+<p>10.$ _ COOKIE：通过HTTPCookie传递到脚本的信息。这些cookie多数是由执行PHP脚本时通过setcookie（）函数设置的。</p>
+<p>11.$ _ SESSION:包含于所有会话变量有关的信息，$ _ SESSION变量主要应用于会话控制和页面之间值得传递。</p>
+<p>12.$ _ POST：包含通过POST方法传递的参数的相关信息，主要用于获取通过POST方法提交的数据。</p>
+<p>13.$ ＿GET：包含通过GET方法传递的参数的相关信息，主要用于获取通过GET方法提交的数据。</p>
+<p>14.GLOBALS：由所有已定义的全局变量组成的数组。变量名就是该数组的索引。它可以称为所有超级变量的超级集合。</p>
+<h3 id="PHP运算符"><a href="#PHP运算符" class="headerlink" title="PHP运算符"></a>PHP运算符</h3><h4 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h4><p>算术运算符包括：+，-，*，/，%。</p>
+<h4 id="字符串运算符"><a href="#字符串运算符" class="headerlink" title="字符串运算符"></a>字符串运算符</h4><p>字符串运算符只有一个，即英文的句号“.”，它将两个字符串连接起来，形成一个新的字符串。</p>
+<h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><p>赋值（=），加（+=），减（-=），乘（*=），除（/=），连接字符（.=），取余数（%=）。</p>
+<h4 id="递增或递减运算符"><a href="#递增或递减运算符" class="headerlink" title="递增或递减运算符"></a>递增或递减运算符</h4><p>1.前置递增运算符</p>
+<p>前置递增运算符是指使用前置“++”运算符将变量加1再将值赋给原变量。</p>
+<p>2.前置递减运算符</p>
+<p>前置递减运算符是指使用前置“–”运算符将变量减1再将值赋给原变量。</p>
+<p>3.后置递增运算符</p>
+<p>后置递增运算符是指先返回变量的当前值，然后再使用后置“++”运算符将变量的当前值再加上1.</p>
+<p>4.后置递减运算符</p>
+<p>后置递减运算符是指先返回变量的当前值，然后再使用后置“–”运算符将变量的当前值再减去1.</p>
+<h4 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h4><p>位运算符是指对二进制位从低到高对齐后进行运算。</p>
+<p>&amp;（按位于），|（按位或），^（按位异或），~（按位取反），&lt;&lt;(向左移位)，&gt;&gt;（向右移位）。</p>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><p>&amp;&amp;或and（逻辑与），||或or（逻辑或），xor（逻辑异或），！（逻辑非）。</p>
+<h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><p><img src="http://i.imgur.com/uUbn761.jpg" alt=""></p>
+<h4 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h4><p>条件运算符用于根据一个表达式在两个表达式中选择一个，而不是用来两个语句或者程序中选择。条件运算符也称三目运算符，条件运算符的使用最好放在括号里。</p>
+<h4 id="运算符的优先顺序和结合规则"><a href="#运算符的优先顺序和结合规则" class="headerlink" title="运算符的优先顺序和结合规则"></a>运算符的优先顺序和结合规则</h4><p><img src="http://i.imgur.com/XbSPEKi.jpg" alt=""></p>
+<h3 id="PHP函数"><a href="#PHP函数" class="headerlink" title="PHP函数"></a>PHP函数</h3><h4 id="定义和调用函数"><a href="#定义和调用函数" class="headerlink" title="定义和调用函数"></a>定义和调用函数</h4><p>创建函数的基本语法：</p>
+<pre><code>function fun_name($str1,$str2,……$strn){
+    fun_body;
+}
+</code></pre><p>其中</p>
+<ul>
+<li>function：为声明自定义函数时必须使用到的关键字。</li>
+<li>fun_name：为自定义函数的名称</li>
+<li>$str1,$str2,……$strn：函数的参数</li>
+<li>fun_body：自定义函数的主体，是功能实现部分。</li>
+</ul>
+<h4 id="在函数间传递参数"><a href="#在函数间传递参数" class="headerlink" title="在函数间传递参数"></a>在函数间传递参数</h4><p>1.按值传递方式</p>
+<p>将实参的值复制到对应的形参中，在函数内部的操作针对形参进行，操作的结果不会影响到实参，即函数返回后，实参的值不会改变。</p>
+<p>2.按引用传递方式</p>
+<p>按引用传递就是将实参的内存地址传递到形参中。这时，在函数内部的所有操作都会影响到实参的值，返回后，实参的值会发生变化。引用传递方式就是传值时在原基础上&amp;号即可。</p>
+<p>3.默认参数（可选参数）<br>可以指定某个参数为可选参数，将可选参数放在参数列表末尾，并且指定其默认值为空。</p>
+<p>例：</p>
+<pre><code>&lt;?php
+    function values($price,$tax=&quot;&quot;){
+        $price=$price+($price*$tax);
+        ehco &quot;价格：$price&lt;br&gt;&quot;;
+    }
+    value(100,0.36);
+    value(100);
+?&gt;
+</code></pre><p>结果为：价格：136  价格：100</p>
+<h4 id="从函数中返回值"><a href="#从函数中返回值" class="headerlink" title="从函数中返回值"></a>从函数中返回值</h4><p>return将函数的值返回给函数的调用者，即将程序控制权返回到调用者的作用域。如果在全局作用域内使用return，那么将终止脚本的执行。</p>
+<h4 id="变量函数"><a href="#变量函数" class="headerlink" title="变量函数"></a>变量函数</h4><p>函数的调用是通过改变变量名来实现的，通过在变量名后面加上一对小括号，PHP将自动寻找与变量名相同的函数，并且执行它。</p>
+<h4 id="对函数的引用"><a href="#对函数的引用" class="headerlink" title="对函数的引用"></a>对函数的引用</h4><p>引用不仅用于普通变量，函数参数，也可作用于函数本身。对函数的引用，就是对函数返回结果的引用。</p>
+<p>例：</p>
+<pre><code>&lt;?php
+function &amp;example($tmp=0){            
+    return $tmp;
+    }
+$str = &amp;example(&quot;YuanErHero&quot;)；
+echo ￥str.&quot;&lt;p&gt;&quot;;
+?&gt;
+</code></pre><p>结果为：YuanErHero</p>
+<h4 id="取消引用"><a href="#取消引用" class="headerlink" title="取消引用"></a>取消引用</h4><p>取消引用使用unset（）函数，它只是断开了变量名和变量内容之间的绑定，而不是销毁变量内容。</p>
+<pre><code>$math = &amp;$num;
+unset($math);
+</code></pre><h3 id="输出语句"><a href="#输出语句" class="headerlink" title="输出语句"></a>输出语句</h3><h4 id="应用print语句输出字符"><a href="#应用print语句输出字符" class="headerlink" title="应用print语句输出字符"></a>应用print语句输出字符</h4><p>print语句只能同时输出一个字符串，需要圆括号。</p>
+<p>例：</p>
+<pre><code>&lt;?php
+print(&quot;helloworld&quot;);
+$str=&quot;zhangewi&quot;
+print $str;
+?&gt;
+</code></pre><h4 id="应用ehco语句输出字符"><a href="#应用ehco语句输出字符" class="headerlink" title="应用ehco语句输出字符"></a>应用ehco语句输出字符</h4><p>1.echo直接将要输出的字符串或者变量跟在ehco后面，字符串或变量ehco之间以一个空格分隔。</p>
+<p>语法：</p>
+<pre><code>echo &quot;string arg1,string [arg2]……&quot;
+</code></pre><p>2.echo语句后面可以连续输出多个字符，它们之间以逗号分隔。</p>
+<pre><code>&lt;?php
+$mr = &quot;asdfas&quot;;
+$str = &quot;asdfqwf&quot;;
+echo $mr,$str;
+?&gt;
+</code></pre><p>3.连续输出多个字符串，可以使用字符串运算符“.”将多个字符串连接成一个新型字符串输出。</p>
+<pre><code>&lt;?php
+$str1=&quot;一个人的快乐&quot;；
+$str2=&quot;不是他拥有的多&quot;；
+$str3=&quot;而是因为他计较的少&quot;;
+echo &amp;str1.&quot;,&quot;.$str2.&quot;,&quot;.$str3.&quot;。&quot;；
+?&gt;
+</code></pre><p>结果为：一个人的快乐，不是因为他拥有的多，而是因为他计较的少。</p>
+<p>4.echo语句后紧跟的参数应该是字符串类型，如果不是，PHP将自动将其进行转换，所以echo语句同样可以输出其他类型的数据。</p>
+<h4 id="应用printf语句格式化输出字符"><a href="#应用printf语句格式化输出字符" class="headerlink" title="应用printf语句格式化输出字符"></a>应用printf语句格式化输出字符</h4><p>语法：</p>
+<pre><code>int printf(string format[,nixed args[,mixed……]])
+</code></pre><p><img src="http://i.imgur.com/kWrYFkm.jpg" alt=""></p>
+<pre><code>&lt;?php
+$string = 15;
+printf(&quot;%c&quot;,$string);
+$string =&quot;zhangwei&quot;;
+printf($string);
+$string=1234.00;
+printf(&quot;%0.2f&quot;,$string);  //将整数转换成小数后有两位小数的浮点数
+printf(&quot;%s&quot;,$string);  
+printf(&quot;%X&quot;,$string);  //将整数转换成大写十六进制
+?&gt;
+</code></pre><h4 id="应用sprintf语句格式化输出字符"><a href="#应用sprintf语句格式化输出字符" class="headerlink" title="应用sprintf语句格式化输出字符"></a>应用sprintf语句格式化输出字符</h4><p>格式化字符串用于按一定的格式输出含有许多变量的文本，是最常用的一种操作，可以使用PHP的sprintf语句来完成格式化字符串的功能。</p>
+<p>语法：</p>
+<pre><code>string sprintf(string format,mixed args……）
+</code></pre><h3 id="引用文件"><a href="#引用文件" class="headerlink" title="引用文件"></a>引用文件</h3><h4 id="应用include语句引用文件"><a href="#应用include语句引用文件" class="headerlink" title="应用include语句引用文件"></a>应用include语句引用文件</h4><p>使用include语句引用外部文件时，只有代码执行到include语句时才将外部文件引用进来并读取文件的内容，当所引用的外部文件发生错误是，系统只给出一个警告，而整个PHP文件则继续向下执行。</p>
+<p>语法：</p>
+<pre><code>void include (string filename);
+</code></pre><p>filename是指定的完整路径文件名。</p>
+<h4 id="应用require语句引用文件"><a href="#应用require语句引用文件" class="headerlink" title="应用require语句引用文件"></a>应用require语句引用文件</h4><p>实现对外部文件的引用，在PHP文件被执行前，PHP解析器会用被引用的文件的全部内容替换require语句，然后require语句之外的其他语句组成新的PHP文件，最后再按新PHP文件执行程序代码。</p>
+<p>语法：</p>
+<pre><code>void require（string filename）；
+</code></pre><h4 id="应用include-once语句引用文件"><a href="#应用include-once语句引用文件" class="headerlink" title="应用include_once语句引用文件"></a>应用include_once语句引用文件</h4><p>应用include_once语句会在导入文件前先检测该文件是否在该页面的其他部分被引用过，如果有，则不会重复引用该文件，程序只能引用一次。</p>
+<p>语法：</p>
+<pre><code>void include_once(string filename);
+</code></pre><h4 id="应用require-once语句引用文件"><a href="#应用require-once语句引用文件" class="headerlink" title="应用require_once语句引用文件"></a>应用require_once语句引用文件</h4><p>应用require_once语句会在导入文件前先检测该文件是否在该页面的其他部分被引用过，如果有，则不会重复引用该文件，程序只能引用一次。</p>
+<p>语法：</p>
+<pre><code>void require_once(string filename);
+</code></pre><h4 id="include语句和require语句的区别"><a href="#include语句和require语句的区别" class="headerlink" title="include语句和require语句的区别"></a>include语句和require语句的区别</h4><ul>
+<li><p>在使用require语句调用文件时，如果调用的文件没找到，require语句会输出错误信息，并且立即终止脚本的处理，而include语句不会。</p>
+</li>
+<li><p>使用require语句调用文件时，只要程序一执行，就会立即调用外部文件；而通过include语句调用外部文件时，只有程序执行到该语句时，才会调用外部文件。</p>
+</li>
+</ul>
+<h4 id="include-once语句和require-once语句的区别"><a href="#include-once语句和require-once语句的区别" class="headerlink" title="include_once语句和require_once语句的区别"></a>include_once语句和require_once语句的区别</h4><p>include_once语句在脚本执行期间调用外部文件发生错误时，产生一个警告，而require_once语句则导致一个致命错误。</p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"><i class="fa fa-tag"></i>PHP</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/10/vs2010-MFC使用GDI-显示图片/" rel="next" title="vs2010 MFC使用GDI+显示图片">
+                <i class="fa fa-chevron-left"></i> vs2010 MFC使用GDI+显示图片
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/11/PHP第二章-PHP流程控制语句/" rel="prev" title="PHP第二章 PHP流程控制语句">
+                PHP第二章 PHP流程控制语句 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523702028531&di=8cf617c38397326306ef03b073965df8&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Fface%2Fd5c7743a0cbee1f770dd2e11b3bc322a009742cd.jpg"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yuanerhero/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/5729289439/profile?topnav=1&wvr=6/" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP语法基础"><span class="nav-number">1.</span> <span class="nav-text">PHP语法基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP标记风格"><span class="nav-number">1.1.</span> <span class="nav-text">PHP标记风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP注释应用"><span class="nav-number">1.2.</span> <span class="nav-text">PHP注释应用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP的数据类型"><span class="nav-number">2.</span> <span class="nav-text">PHP的数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标量数据类型"><span class="nav-number">2.1.</span> <span class="nav-text">标量数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复合数据类型"><span class="nav-number">2.2.</span> <span class="nav-text">复合数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特殊数据类型"><span class="nav-number">2.3.</span> <span class="nav-text">特殊数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#转换数据类型"><span class="nav-number">2.4.</span> <span class="nav-text">转换数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检测数据类型"><span class="nav-number">2.5.</span> <span class="nav-text">检测数据类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP的常量应用"><span class="nav-number">3.</span> <span class="nav-text">PHP的常量应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#声明和使用常量"><span class="nav-number">3.1.</span> <span class="nav-text">声明和使用常量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#预定义常量"><span class="nav-number">3.2.</span> <span class="nav-text">预定义常量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP的变量应用"><span class="nav-number">4.</span> <span class="nav-text">PHP的变量应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量声明及使用"><span class="nav-number">4.1.</span> <span class="nav-text">变量声明及使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量作用域"><span class="nav-number">4.2.</span> <span class="nav-text">变量作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可变变量"><span class="nav-number">4.3.</span> <span class="nav-text">可变变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#预定义变量"><span class="nav-number">4.4.</span> <span class="nav-text">预定义变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP运算符"><span class="nav-number">5.</span> <span class="nav-text">PHP运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算术运算符"><span class="nav-number">5.1.</span> <span class="nav-text">算术运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串运算符"><span class="nav-number">5.2.</span> <span class="nav-text">字符串运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#赋值运算符"><span class="nav-number">5.3.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#递增或递减运算符"><span class="nav-number">5.4.</span> <span class="nav-text">递增或递减运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#位运算符"><span class="nav-number">5.5.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">5.6.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#比较运算符"><span class="nav-number">5.7.</span> <span class="nav-text">比较运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#条件运算符"><span class="nav-number">5.8.</span> <span class="nav-text">条件运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运算符的优先顺序和结合规则"><span class="nav-number">5.9.</span> <span class="nav-text">运算符的优先顺序和结合规则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP函数"><span class="nav-number">6.</span> <span class="nav-text">PHP函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义和调用函数"><span class="nav-number">6.1.</span> <span class="nav-text">定义和调用函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在函数间传递参数"><span class="nav-number">6.2.</span> <span class="nav-text">在函数间传递参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从函数中返回值"><span class="nav-number">6.3.</span> <span class="nav-text">从函数中返回值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量函数"><span class="nav-number">6.4.</span> <span class="nav-text">变量函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对函数的引用"><span class="nav-number">6.5.</span> <span class="nav-text">对函数的引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取消引用"><span class="nav-number">6.6.</span> <span class="nav-text">取消引用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出语句"><span class="nav-number">7.</span> <span class="nav-text">输出语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用print语句输出字符"><span class="nav-number">7.1.</span> <span class="nav-text">应用print语句输出字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用ehco语句输出字符"><span class="nav-number">7.2.</span> <span class="nav-text">应用ehco语句输出字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用printf语句格式化输出字符"><span class="nav-number">7.3.</span> <span class="nav-text">应用printf语句格式化输出字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用sprintf语句格式化输出字符"><span class="nav-number">7.4.</span> <span class="nav-text">应用sprintf语句格式化输出字符</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用文件"><span class="nav-number">8.</span> <span class="nav-text">引用文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用include语句引用文件"><span class="nav-number">8.1.</span> <span class="nav-text">应用include语句引用文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用require语句引用文件"><span class="nav-number">8.2.</span> <span class="nav-text">应用require语句引用文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用include-once语句引用文件"><span class="nav-number">8.3.</span> <span class="nav-text">应用include_once语句引用文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用require-once语句引用文件"><span class="nav-number">8.4.</span> <span class="nav-text">应用require_once语句引用文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#include语句和require语句的区别"><span class="nav-number">8.5.</span> <span class="nav-text">include语句和require语句的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#include-once语句和require-once语句的区别"><span class="nav-number">8.6.</span> <span class="nav-text">include_once语句和require_once语句的区别</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+      <div id="music163player">
+         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32196440&auto=0&height=66"></iframe>
+      </div>
+
+    </div>
+  
+  </aside>
+
+
+        
+      </div>
+  </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+
+  
+</div>
+
+
+
+
+
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+    本站访客数:<span id="busuanzi_value_site_uv"></span>
+  </span>
+  </div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共13.6k字</span>
+</div>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  
+</body>
+</html>
