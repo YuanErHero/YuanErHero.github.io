@@ -78,7 +78,7 @@
 
 
 
-  <meta name="keywords" content="ThinkPHP 5," />
+  <meta name="keywords" content="CI," />
 
 
 
@@ -91,21 +91,20 @@
 
 
 
-<meta name="description" content="最近在做项目的时候，为了方便数据表的添加或者更新操作，有时会重新命名数据表中字段的名称（这里的重命名只是在Model层，而不是在数据表里），在网上查询了一下，又看了一下ThinkPHP 5完全开发手册，有两种方法可以解决这个问题。我出现的问题如下：这里的old_goods_attr是数据表中不存在的，但是因为程序需要添加的。这时我的代码是： public function edit()  {">
-<meta name="keywords" content="ThinkPHP 5">
+<meta name="description" content="PHPExcel是一个PHP类库，用来帮助我们简单、高效实现从Excel读取Excel的数据和导出数据到Excel。也是我们日常开发中，经常会遇到的使用场景。 导入PHPExcel下载PHPExcelGit下载：    https://github.com/PHPOffice/PHPExcel 百度网盘下载：https://pan.baidu.com/s/1azR7ERyACm43npmgjhvI">
+<meta name="keywords" content="CI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ThinkPHP 5过滤数据表中不存在的字段">
-<meta property="og:url" content="http://yuanerHero.top/2018/05/03/ThinkPHP5过滤数据表不存在的字段/index.html">
+<meta property="og:title" content="CI框架下利用PHPExcel导入Excel数据进数据库">
+<meta property="og:url" content="http://yuanerHero.top/2019/02/22/CI框架下导入Excel数据进数据库/index.html">
 <meta property="og:site_name" content="YuanErHero">
-<meta property="og:description" content="最近在做项目的时候，为了方便数据表的添加或者更新操作，有时会重新命名数据表中字段的名称（这里的重命名只是在Model层，而不是在数据表里），在网上查询了一下，又看了一下ThinkPHP 5完全开发手册，有两种方法可以解决这个问题。我出现的问题如下：这里的old_goods_attr是数据表中不存在的，但是因为程序需要添加的。这时我的代码是： public function edit()  {">
+<meta property="og:description" content="PHPExcel是一个PHP类库，用来帮助我们简单、高效实现从Excel读取Excel的数据和导出数据到Excel。也是我们日常开发中，经常会遇到的使用场景。 导入PHPExcel下载PHPExcelGit下载：    https://github.com/PHPOffice/PHPExcel 百度网盘下载：https://pan.baidu.com/s/1azR7ERyACm43npmgjhvI">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.imgur.com/ZEwDGcz.png">
-<meta property="og:image" content="https://i.imgur.com/ILHlwtx.png">
-<meta property="og:updated_time" content="2018-05-08T15:25:06.403Z">
+<meta property="og:image" content="https://i.imgur.com/qiGh26W.png">
+<meta property="og:updated_time" content="2019-02-25T08:58:03.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ThinkPHP 5过滤数据表中不存在的字段">
-<meta name="twitter:description" content="最近在做项目的时候，为了方便数据表的添加或者更新操作，有时会重新命名数据表中字段的名称（这里的重命名只是在Model层，而不是在数据表里），在网上查询了一下，又看了一下ThinkPHP 5完全开发手册，有两种方法可以解决这个问题。我出现的问题如下：这里的old_goods_attr是数据表中不存在的，但是因为程序需要添加的。这时我的代码是： public function edit()  {">
-<meta name="twitter:image" content="https://i.imgur.com/ZEwDGcz.png">
+<meta name="twitter:title" content="CI框架下利用PHPExcel导入Excel数据进数据库">
+<meta name="twitter:description" content="PHPExcel是一个PHP类库，用来帮助我们简单、高效实现从Excel读取Excel的数据和导出数据到Excel。也是我们日常开发中，经常会遇到的使用场景。 导入PHPExcel下载PHPExcelGit下载：    https://github.com/PHPOffice/PHPExcel 百度网盘下载：https://pan.baidu.com/s/1azR7ERyACm43npmgjhvI">
+<meta name="twitter:image" content="https://i.imgur.com/qiGh26W.png">
 
 
 
@@ -135,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yuanerHero.top/2018/05/03/ThinkPHP5过滤数据表不存在的字段/"/>
+  <link rel="canonical" href="http://yuanerHero.top/2019/02/22/CI框架下导入Excel数据进数据库/"/>
 
 
 
 
 
-  <title>ThinkPHP 5过滤数据表中不存在的字段 | YuanErHero</title>
+  <title>CI框架下利用PHPExcel导入Excel数据进数据库 | YuanErHero</title>
   
 
 
@@ -281,7 +280,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yuanerHero.top/2018/05/03/ThinkPHP5过滤数据表不存在的字段/">
+    <link itemprop="mainEntityOfPage" href="http://yuanerHero.top/2019/02/22/CI框架下导入Excel数据进数据库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -298,7 +297,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ThinkPHP 5过滤数据表中不存在的字段</h1>
+          <h1 class="post-title" itemprop="name headline">CI框架下利用PHPExcel导入Excel数据进数据库</h1>
         
 
         <div class="post-meta">
@@ -310,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-03T10:38:52+08:00">
-                2018-05-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-22T17:31:04+08:00">
+                2019-02-22
               </time>
             
 
@@ -333,8 +332,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ThinkPHP-5/" itemprop="url" rel="index">
-                    <span itemprop="name">ThinkPHP 5</span>
+                  <a href="/categories/CI/" itemprop="url" rel="index">
+                    <span itemprop="name">CI</span>
                   </a>
                 </span>
 
@@ -364,7 +363,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  366
+                  293
                 </span>
               
 
@@ -401,48 +400,84 @@
       
 
       
-        <p>最近在做项目的时候，为了方便数据表的添加或者更新操作，有时会重新命名数据表中字段的名称（这里的重命名只是在Model层，而不是在数据表里），在网上查询了一下，又看了一下ThinkPHP 5完全开发手册，有两种方法可以解决这个问题。<br>我出现的问题如下：<br><img src="https://i.imgur.com/ZEwDGcz.png" alt=""><br>这里的<code>old_goods_attr</code>是数据表中不存在的，但是因为程序需要添加的。<br>这时我的代码是：</p>
-<pre><code>public function edit()
- {    
-    if(request()-&gt;isPost()){
-        $data=input(&apos;post.&apos;);
-        $update=model(&apos;goods&apos;)-&gt;save($data);
-        if(!$update){
-            $this-&gt;success(&apos;修改商品成功！&apos;,&apos;lst&apos;);
-        }else{
-            $this-&gt;error(&apos;修改商品失败！&apos;);
-        }
-        return;
-}
-</code></pre><p>解决方法有两个：</p>
-<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>在你的模型类定义中，设置 field 属性为 true，如下：</p>
-<pre><code>class User extend Model {
-    protected $field = true;
-}
-</code></pre><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>如果需要过滤非数据表字段的数据，可以使用：</p>
-<pre><code>$user = new User($_POST);
-    // 过滤post数组中的非数据表字段数据
-$user-&gt;allowField(true)-&gt;save();
-</code></pre><p>我利用方法二修改后，还是不行，会报下面的错误：</p>
-<p><img src="https://i.imgur.com/ILHlwtx.png" alt=""></p>
-<p>这是由于我的数据添加修改都用到了save()提交到数据库，我这里修改数据，这是只需要修改为：</p>
-<pre><code>$user-&gt;allowField(true)-&gt;isUpdata(ture)-&gt;save();
-</code></pre><p>这时完整的代码为：</p>
-<pre><code> public function edit()
-{
-    if(request()-&gt;isPost()){
-        $data=input(&apos;post.&apos;);
-        $update=model(&apos;goods&apos;)-&gt;allowField(true)-&gt;isUpdate(true)-&gt;save($data);
-        if(!$update){
-            $this-&gt;success(&apos;修改商品成功！&apos;,&apos;lst&apos;);
-        }else{
-            $this-&gt;error(&apos;修改商品失败！&apos;);
-        }
-        return;
+        <p>PHPExcel是一个PHP类库，用来帮助我们简单、高效实现从Excel读取Excel的数据和导出数据到Excel。也是我们日常开发中，经常会遇到的使用场景。</p>
+<h2 id="导入PHPExcel"><a href="#导入PHPExcel" class="headerlink" title="导入PHPExcel"></a>导入PHPExcel</h2><h3 id="下载PHPExcel"><a href="#下载PHPExcel" class="headerlink" title="下载PHPExcel"></a>下载PHPExcel</h3><p>Git下载：<br>    <a href="https://github.com/PHPOffice/PHPExcel" target="_blank" rel="noopener">https://github.com/PHPOffice/PHPExcel</a></p>
+<p>百度网盘下载：<a href="https://pan.baidu.com/s/1azR7ERyACm43npmgjhvIfA" target="_blank" rel="noopener">https://pan.baidu.com/s/1azR7ERyACm43npmgjhvIfA</a>     密码：jbza</p>
+<h3 id="引入PHPExcel"><a href="#引入PHPExcel" class="headerlink" title="引入PHPExcel"></a>引入PHPExcel</h3><p>把解压下来的文件放在<code>application/libraries</code>下：<br><img src="https://i.imgur.com/qiGh26W.png" alt=""></p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>Controller:</p>
+<pre><code>&lt;?php
 
-}
-</code></pre><p>到这里，就成功了！</p>
+    class TestImportExcel extends CI_Controller
+    {
 
+        function __construct()
+        {
+            parent::__construct();
+            $this-&gt;load-&gt;model(&apos;TestImportExcel_model&apos;,&apos;testimportexcel_model&apos;);
+        }
+
+        public function importexcel(){
+            if ($_FILES[&apos;file&apos;][&apos;name&apos;]) {
+                $tmp_file = $_FILES[&apos;file&apos;][&apos;tmp_name&apos;];
+                $file_types = explode(&apos;.&apos;, $_FILES[&apos;file&apos;][&apos;name&apos;]);
+                $file_type = $file_types[count($file_types)-1];
+
+                //判断是否为excel文件
+                if (strtolower($file_type) != &apos;xlsx&apos;) {
+                    echo &quot;不是excel文件，请重新上传！&quot;;
+                }
+
+                //设置上传路径
+                $savePath = &quot;./uploads/&quot;;
+                //文件命名
+                $str = date(&apos;Ymdhis&apos;);
+                $file_name = $str.&quot;.&quot;.$file_type;
+                    if (!copy($tmp_file,$savePath.$file_name)) {
+                        echo &quot;上传失败&quot;;
+                    }
+                    $this-&gt;load-&gt;library(&apos;PHPExcel&apos;);
+                    $objPHPExcel = new PHPExcel();
+                    $objProps = $objPHPExcel-&gt;getProperties();
+                    $objReader = PHPExcel_IOFactory::createReader(&apos;Excel2007&apos;);
+                    $objPHPExcel = $objReader-&gt;load($savePath . $file_name);
+                    $sheet = $objPHPExcel-&gt;getSheet(0);
+                    $highestRow = $sheet-&gt;getHighestRow();
+                    $highestColumn = $sheet-&gt;getHighestColumn();
+
+                    //excel中的一条数据
+                    $excel_data = array();
+                    for ($currentRow=2; $currentRow &lt;= $highestRow; $currentRow++) { 
+                        for ($currentColumn=&apos;A&apos;; $currentColumn &lt;= $highestColumn ; $currentColumn++) { 
+                            $excel_data[$currentColumn]=$objPHPExcel-&gt;getActiveSheet()-&gt;getCell($currentColumn . $currentRow)-&gt;getValue();
+                        }
+                        $this-&gt;testimportexcel_model-&gt;insert_excel($excel_data[&apos;A&apos;],$excel_data[&apos;B&apos;]);
+                    }
+
+                    echo &quot;导入成功&quot;;
+            }
+        }
+    }
+?&gt;
+</code></pre><p>model:</p>
+<pre><code>&lt;?php
+    class TestImportExcel_model extends CI_Model{
+        public function __construct(){
+            parent::__construct();
+
+            $this-&gt;load-&gt;database();
+        }
+
+        //插入数据到数据库
+        public function insert_excel($main_question,$answer){
+            $data = array(
+                &apos;main_question&apos;=&gt;$main_question,
+                &apos;answer&apos; =&gt; $answer,
+            );
+            $this-&gt;db-&gt;insert(&apos;question_answer&apos;,$data);
+        }
+    }
+?&gt;
+</code></pre>
       
     </div>
     
@@ -475,7 +510,7 @@ $user-&gt;allowField(true)-&gt;save();
       
         <div class="post-tags">
           
-            <a href="/tags/ThinkPHP-5/" rel="tag"><i class="fa fa-tag"></i>ThinkPHP 5</a>
+            <a href="/tags/CI/" rel="tag"><i class="fa fa-tag"></i>CI</a>
           
         </div>
       
@@ -488,8 +523,8 @@ $user-&gt;allowField(true)-&gt;save();
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/18/使用github-hexo-域名绑定（阿里云）搭建个人博客/" rel="next" title="使用github+hexo+域名绑定（阿里云）搭建个人博客">
-                <i class="fa fa-chevron-left"></i> 使用github+hexo+域名绑定（阿里云）搭建个人博客
+              <a href="/2019/02/22/MongoDB-把毫秒级时间修改为秒级时间/" rel="next" title="MongoDB 把毫秒级时间修改为秒级时间">
+                <i class="fa fa-chevron-left"></i> MongoDB 把毫秒级时间修改为秒级时间
               </a>
             
           </div>
@@ -497,10 +532,6 @@ $user-&gt;allowField(true)-&gt;save();
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/10/vs2010-MFC使用GDI-显示图片/" rel="prev" title="vs2010 MFC使用GDI+显示图片">
-                vs2010 MFC使用GDI+显示图片 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -659,7 +690,7 @@ $user-&gt;allowField(true)-&gt;save();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一"><span class="nav-number">1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二"><span class="nav-number">2.</span> <span class="nav-text">方法二</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#导入PHPExcel"><span class="nav-number">1.</span> <span class="nav-text">导入PHPExcel</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载PHPExcel"><span class="nav-number">1.1.</span> <span class="nav-text">下载PHPExcel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入PHPExcel"><span class="nav-number">1.2.</span> <span class="nav-text">引入PHPExcel</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块"><span class="nav-number">2.</span> <span class="nav-text">代码块</span></a></li></ol></div>
             
 
           </div>
